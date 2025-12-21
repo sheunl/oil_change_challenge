@@ -1,14 +1,13 @@
 <?php
 
-
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OilChangeController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', [OilChangeController::class, 'index'])
     ->name('oil-change.index');
 
-Route::post('/calculate', [OilChangeController::class, 'calculate'])
-    ->name('oil-change.calculate');
+Route::post('/check', [OilChangeController::class, 'check'])
+    ->name('oil-change.check');
 
-Route::get('/results/{id}', [OilChangeController::class, 'results'])
-    ->name('oil-change.results');
+Route::get('/result/{id}', [OilChangeController::class, 'result'])
+    ->name('oil-change.result');

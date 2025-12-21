@@ -12,16 +12,16 @@
     </div>
 @endif
 <div id="oil-change-div" class="container mx-auto mt-5 p-4 border rounded md:w-1/2 lg:w-1/3">
-    <form action="{{ route('oil-change.calculate') }}" method="POST">
+    <form action="{{ route('oil-change.check') }}" method="POST">
         @csrf
         <span class="flex flex-col space-y-5">
-            <label class="form-label mb-0" for="current_odometer">Current Odometer:</label>
+            <label class="form-label mb-0" for="current_odometer">Current Odometer (km):</label>
             <input class="form-control outline" type="number" id="current_odometer" name="current_odometer" required>
             
             <label class="form-label mb-0" for="previous_oil_change_date">Date of Previous Oil Change:</label>
             <input class="form-control outline" type="date" id="previous_oil_change_date" name="previous_oil_change_date" required>
 
-            <label class="form-label mb-0" for="previous_oil_change_odometer">Odometer at Previous Oil Change:</label>
+            <label class="form-label mb-0" for="previous_oil_change_odometer">Odometer at Previous Oil Change (km):</label>
             <input class="form-control outline" type="number" id="previous_oil_change_odometer" name="previous_oil_change_odometer" required>
             
             <button class="btn btn-gray cursor-pointer" type="submit">Submit</button>
