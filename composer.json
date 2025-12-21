@@ -65,6 +65,11 @@
         ],
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
+        ],
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "npm run build",
+            "php artisan serve"
         ]
     },
     "extra": {
