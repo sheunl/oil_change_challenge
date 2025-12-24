@@ -4,9 +4,8 @@ A Laravel application that calculates when your next oil change is due based on 
 
 ## Requirements
 
-- PHP 8.2 or higher
-- Composer
-- Node.js & NPM
+- Using DDEV to simplify running across various platforms, Follow this [Link](https://docs.ddev.com/en/stable/users/install/ddev-installation/) to learn how to install and setup ddev.
+
 
 ## Setup Instructions
 
@@ -18,22 +17,20 @@ A Laravel application that calculates when your next oil change is due based on 
 
 2. **Install PHP , JavaScript dependencies; Set up environment file & run migrations**
    ```bash
-   composer setup
+   ddev composer setup
    ```
 
-## Running the Application
-
-Start the development server:
+## Launch the Application
 
 ```bash
-composer serve
+ddev launch
 ```
 
-The application will be available at `http://localhost:8000` or another port if port `8000` is unavailable
+The application will be available at `https://oil-change-challenge.ddev.site/` and should open automatically in your browser
 
 For development with hot reload:
 ```bash
-composer run dev
+ddev composer run dev
 ```
 
 ## Usage
